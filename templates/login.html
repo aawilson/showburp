@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    {% if session['logged_in'] %}
+        <p>You're logged in already!</p>
+    {% else %}
+    <p>
+        <form action="/login" method="POST">
+          <input type="username" name="username" placeholder="Username">
+          <input type="password" name="password" placeholder="Password">
+          <input type="submit" value="Log in">
+        </form>
+    </p><p>
+    or
+    </p><p>
+    go <a href="/lost_password">here</a> to reset your password
+    </p>
+    {% endif %}
+{% endblock %}
