@@ -7,5 +7,5 @@ This is a web app that allows stupid simple login and password resets. To get it
 1. Set up your environment the way you want (maybe get a virtualenv and enter it)
 2. `pip install -r requirements.txt`
 3. Edit `populate_users.py` if you want usernames and passwords that aren't in there
-4. Run `python tabledef.py && python populate_users.py` (you can remove `tutorial.db` and do this step again to refresh the db for whatever reason)
+4. Run `python populate_users.py` (you can remove `tutorial.db` and do this step again to refresh the db for whatever reason)
 5. Run `python main.py`, navigate to localhost:4000
