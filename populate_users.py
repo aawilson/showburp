@@ -1,3 +1,6 @@
+from __future__ import print_function
+from __future__ import unicode_literals
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from tabledef import *
@@ -5,8 +8,6 @@ from tabledef import *
 
 engine = create_engine('sqlite:///tutorial.db', echo=True)
 
-
-# create a Session
 Session = sessionmaker(bind=engine)
 session = Session()
 
@@ -16,5 +17,4 @@ session.add(user)
 user = User("test2", "password2", "someone@example.com")
 session.add(user)
 
-# commit the record the database
 session.commit()
